@@ -11,9 +11,47 @@ AI-powered code generation using natural language prompts.
 
 
 code-copilot/
-├── frontend/          # Next.js App (React, TypeScript, TailwindCSS)
-├── backend/           # Express API (Node.js, PostgreSQL, Gemini AI)
-└── docs/             # ER diagrams
+├── frontend/              # Next.js React Frontend
+│   ├── app/              # Next.js App Router
+│   │   ├── api/         # API routes (legacy)
+│   │   ├── docs/        # Documentation page
+│   │   ├── globals.css  # Global styles
+│   │   ├── layout.tsx   # Root layout
+│   │   └── page.tsx     # Main page
+│   ├── components/       # React components
+│   ├── contexts/         # React Context providers
+│   ├── lib/             # Utility functions
+│   ├── public/          # Static assets
+│   ├── types/           # TypeScript definitions
+│   ├── package.json     # Frontend dependencies
+│   ├── next.config.js   # Next.js configuration
+│   ├── tailwind.config.ts
+│   ├── tsconfig.json
+│   └── .env.example     # Frontend environment template
+│
+├── backend/              # Node.js Express API
+│   ├── src/
+│   │   ├── config/      # Database configuration
+│   │   ├── controllers/ # Business logic
+│   │   ├── routes/      # API endpoints
+│   │   ├── swagger/     # Swagger documentation
+│   │   └── server.js    # Entry point
+│   ├── migrations/      # SQL schema & seed data
+│   │   ├── 001_initial_schema.sql
+│   │   ├── 002_seed_data.sql
+│   │   └── run-migrations.js
+│   ├── verify-db.js     # Database verification script
+│   ├── package.json     # Backend dependencies
+│   └── .env.example     # Backend environment template
+│
+├── docs/                # Documentation & Diagrams
+│   ├── er-diagram.svg   # ER Diagram (visual)
+│   ├── er-diagram.dbml  # ER Diagram (code)
+│   └── README.md        # Docs readme
+│
+├── .env.example         # Root environment template
+├── README.md            # This file
+└── .gitignore          # Git ignore rules
 
 
 ---
