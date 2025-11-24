@@ -9,7 +9,7 @@ AI-powered code generation using natural language prompts.
 
 ## 📂 Project Structure
 
-bash
+```
 code-copilot/
 ├── frontend/                       # Next.js React Frontend
 │   ├── app/                        # Next.js App Router
@@ -52,16 +52,18 @@ code-copilot/
 ├── .env.example                    # Root env template
 ├── README.md                       # Root documentation
 └── .gitignore                      # Git ignore rules
+```
 
 ## 🚀 Setup Instructions
 
 ### Prerequisites
-* Node.js 18+
-* PostgreSQL 14+
-* [Gemini API Key](https://aistudio.google.com/app/apikey)
+- Node.js 18+
+- PostgreSQL 14+
+- [Gemini API Key](https://aistudio.google.com/app/apikey)
 
 ### Backend Setup
-bash
+
+```bash
 cd backend
 npm install
 cp .env.example .env
@@ -69,78 +71,81 @@ cp .env.example .env
 createdb code_copilot
 npm run migrate
 npm run dev  # http://localhost:5000
+```
 
 ### Frontend Setup
-bash
+
+```bash
 cd frontend
 npm install
 cp .env.example .env.local
 # Set NEXT_PUBLIC_API_URL=http://localhost:5000
 npm run dev  # http://localhost:3000
+```
 
 ---
 
 ## 🏗 Architecture Decisions
 
-*Frontend (Next.js):*
-* SSR for better performance and SEO
-* TailwindCSS for rapid UI development
-* TypeScript for type safety
+**Frontend (Next.js):**
+- SSR for better performance and SEO
+- TailwindCSS for rapid UI development
+- TypeScript for type safety
 
-*Backend (Express):*
-* RESTful API with PostgreSQL
-* 3NF normalized schema (users, languages, generations)
-* 8 optimized indexes for fast queries
+**Backend (Express):**
+- RESTful API with PostgreSQL
+- 3NF normalized schema (users, languages, generations)
+- 8 optimized indexes for fast queries
 
-*Database Design:*
-* Foreign keys: users (1:N) generations, languages (1:N) generations
-* Indexes on created_at DESC, user_id, language_id for O(log n) lookups
-* Composite index (user_id, created_at DESC) for user-specific pagination
+**Database Design:**
+- Foreign keys: users (1:N) generations, languages (1:N) generations
+- Indexes on created_at DESC, user_id, language_id for O(log n) lookups
+- Composite index (user_id, created_at DESC) for user-specific pagination
 
-*AI (Gemini API):*
-* Low latency (~2-5s)
-* Free tier for development
-* Multi-language support
+**AI (Gemini API):**
+- Low latency (~2-5s)
+- Free tier for development
+- Multi-language support
 
 ---
 
 ## ✨ Implemented Features
 
-* ✅ AI code generation (7 languages: Python, JS, TS, Java, C++, Go, Rust)
-* ✅ Syntax highlighting with copy-to-clipboard
-* ✅ Paginated history with language filtering
-* ✅ Usage statistics dashboard
-* ✅ Interactive API documentation (Swagger UI)
-* ✅ Rate limiting (100 req/min)
-* ✅ Security: Helmet.js, CORS, parameterized queries
-* ✅ Database: 3NF schema with optimized indexes
+- ✅ AI code generation (7 languages: Python, JS, TS, Java, C++, Go, Rust)
+- ✅ Syntax highlighting with copy-to-clipboard
+- ✅ Paginated history with language filtering
+- ✅ Usage statistics dashboard
+- ✅ Interactive API documentation (Swagger UI)
+- ✅ Rate limiting (100 req/min)
+- ✅ Security: Helmet.js, CORS, parameterized queries
+- ✅ Database: 3NF schema with optimized indexes
 
 ---
 
 ## 🔮 Future Improvements
 
-*High Priority:*
-* User authentication (JWT)
-* Code execution sandbox (Docker)
-* Real-time collaboration (WebSockets)
-* Advanced prompt templates
+**High Priority:**
+- User authentication (JWT)
+- Code execution sandbox (Docker)
+- Real-time collaboration (WebSockets)
+- Advanced prompt templates
 
-*Medium Priority:*
-* Code quality analysis (linting, syntax checking)
-* Version control integration (Git)
-* Full-text search (Elasticsearch)
-* Export options (files, GitHub Gist)
+**Medium Priority:**
+- Code quality analysis (linting, syntax checking)
+- Version control integration (Git)
+- Full-text search (Elasticsearch)
+- Export options (files, GitHub Gist)
 
-*Low Priority:*
-* Multiple AI models (GPT-4, Claude)
-* Mobile app (React Native)
-* Analytics dashboard
+**Low Priority:**
+- Multiple AI models (GPT-4, Claude)
+- Mobile app (React Native)
+- Analytics dashboard
 
-*Technical Debt:*
-* Unit/integration tests
-* CI/CD pipeline
-* Error monitoring (Sentry)
-* Redis caching
+**Technical Debt:**
+- Unit/integration tests
+- CI/CD pipeline
+- Error monitoring (Sentry)
+- Redis caching
 
 ---
 
@@ -150,30 +155,32 @@ npm run dev  # http://localhost:3000
 
 Access the interactive API documentation at:
 
+```
 http://localhost:5000/api-docs
-
+```
 
 Swagger UI provides:
-* Live API testing interface
-* Request/response examples
-* Schema definitions
-* Authentication testing
+- Live API testing interface
+- Request/response examples
+- Schema definitions
+- Authentication testing
 
 ### Example API Payloads
 
 #### Generate Code
-*Request:*
-json
+
+**Request:**
+```json
 POST /api/generate
 {
   "prompt": "Write a Python function to check if a number is prime",
   "language": "Python",
   "userId": 1
 }
+```
 
-
-*Response:*
-json
+**Response:**
+```json
 {
   "success": true,
   "data": {
@@ -183,16 +190,17 @@ json
     "timestamp": "2025-01-23T14:30:00.000Z"
   }
 }
-
+```
 
 #### Get History
-*Request:*
 
+**Request:**
+```
 GET /api/history?page=1&limit=10&language=Python
+```
 
-
-*Response:*
-json
+**Response:**
+```json
 {
   "success": true,
   "data": [
@@ -210,16 +218,17 @@ json
     "totalPages": 5
   }
 }
-
+```
 
 #### Get Statistics
-*Request:*
 
+**Request:**
+```
 GET /api/stats
+```
 
-
-*Response:*
-json
+**Response:**
+```json
 {
   "success": true,
   "data": {
@@ -230,27 +239,23 @@ json
     ]
   }
 }
-
+```
 
 ---
 
 ## 🛠 Tech Stack
 
-*Frontend:* Next.js 15 · React 18 · TypeScript · TailwindCSS  
-*Backend:* Express.js · PostgreSQL · Gemini AI · Swagger UI  
-*Deploy:* Vercel · Railway · Supabase
+**Frontend:** Next.js 15 · React 18 · TypeScript · TailwindCSS  
+**Backend:** Express.js · PostgreSQL · Gemini AI · Swagger UI  
+**Deploy:** Vercel · Railway · Supabase
 
 ---
 
 ## 👤 Author
 
-*Arpit Kushwaha*  
+**Arpit Kushwaha**  
 GitHub: [@Arpitkushwahaa](https://github.com/Arpitkushwahaa)
 
 Built with Next.js · Express · PostgreSQL · Gemini AI
+
 ---
-
-
- 
-
-
