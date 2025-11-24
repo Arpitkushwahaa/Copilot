@@ -22,7 +22,7 @@ A modern Code Generation Copilot web application built with Next.js, React, Type
 1. Code generation with multiple language support
 2. Prompt history with localStorage persistence
 3. Syntax highlighting for code output
-4. Dark/Light theme toggle
+
 5. Responsive design
 6. Form validation
 7. Copy to clipboard functionality
