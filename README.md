@@ -7,6 +7,9 @@ AI-powered code generation using natural language prompts.
 
 ---
 
+## 📂 Project Structure
+
+bash
 code-copilot/
 ├── frontend/                       # Next.js React Frontend
 │   ├── app/                        # Next.js App Router
@@ -49,7 +52,6 @@ code-copilot/
 ├── .env.example                    # Root env template
 ├── README.md                       # Root documentation
 └── .gitignore                      # Git ignore rules
-
 
 ## 🚀 Setup Instructions
 
