@@ -2,7 +2,7 @@
 
 AI-powered code generation using natural language prompts.
 
-![](./frontend/public/screenshot.png)
+![Screenshot](./frontend/public/screenshot.png)
 ![ER Diagram](./docs/er-diagram.svg)
 
 ---
