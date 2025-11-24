@@ -8,7 +8,8 @@ A modern Code Generation Copilot web application built with Next.js, React, Type
 - React 18+
 - TypeScript
 - TailwindCSS
-- React Syntax Highlighter
+- Postgres Sql
+- React Syntax Highlighte
 
 ## Project Structure
 - `/app` - Next.js app router pages and layouts
