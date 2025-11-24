@@ -7,54 +7,49 @@ AI-powered code generation using natural language prompts.
 
 ---
 
-## 📁 Project Structure
-
-
 code-copilot/
-├── frontend/              # Next.js React Frontend
-│   ├── app/              # Next.js App Router
-│   │   ├── api/         # API routes (legacy)
-│   │   ├── docs/        # Documentation page
-│   │   ├── globals.css  # Global styles
-│   │   ├── layout.tsx   # Root layout
-│   │   └── page.tsx     # Main page
-│   ├── components/       # React components
-│   ├── contexts/         # React Context providers
-│   ├── lib/             # Utility functions
-│   ├── public/          # Static assets
-│   ├── types/           # TypeScript definitions
-│   ├── package.json     # Frontend dependencies
-│   ├── next.config.js   # Next.js configuration
+├── frontend/                       # Next.js React Frontend
+│   ├── app/                        # Next.js App Router
+│   │   ├── api/                    # API routes (legacy)
+│   │   ├── docs/                   # Documentation page
+│   │   ├── globals.css             # Global styles
+│   │   ├── layout.tsx              # Root layout
+│   │   └── page.tsx                # Main page
+│   ├── components/                 # Reusable React components
+│   ├── contexts/                   # React Context providers
+│   ├── lib/                        # Utility functions
+│   ├── public/                     # Static assets
+│   ├── types/                      # TypeScript definitions
+│   ├── package.json                # Frontend dependencies
+│   ├── next.config.js              # Next.js configuration
 │   ├── tailwind.config.ts
 │   ├── tsconfig.json
-│   └── .env.example     # Frontend environment template
+│   └── .env.example                # Frontend environment template
 │
-├── backend/              # Node.js Express API
+├── backend/                        # Node.js Express API
 │   ├── src/
-│   │   ├── config/      # Database configuration
-│   │   ├── controllers/ # Business logic
-│   │   ├── routes/      # API endpoints
-│   │   ├── swagger/     # Swagger documentation
-│   │   └── server.js    # Entry point
-│   ├── migrations/      # SQL schema & seed data
+│   │   ├── config/                 # Database configuration
+│   │   ├── controllers/            # Business logic
+│   │   ├── routes/                 # API endpoints
+│   │   ├── swagger/                # Swagger documentation
+│   │   └── server.js               # Entry point
+│   ├── migrations/                 # SQL schema & seed data
 │   │   ├── 001_initial_schema.sql
 │   │   ├── 002_seed_data.sql
 │   │   └── run-migrations.js
-│   ├── verify-db.js     # Database verification script
-│   ├── package.json     # Backend dependencies
-│   └── .env.example     # Backend environment template
+│   ├── verify-db.js                # DB verification script
+│   ├── package.json                # Backend dependencies
+│   └── .env.example                # Backend environment template
 │
-├── docs/                # Documentation & Diagrams
-│   ├── er-diagram.svg   # ER Diagram (visual)
-│   ├── er-diagram.dbml  # ER Diagram (code)
-│   └── README.md        # Docs readme
+├── docs/                           # Documentation & diagrams
+│   ├── er-diagram.svg              # ER Diagram visual
+│   ├── er-diagram.dbml             # ER Diagram code definition
+│   └── README.md                   # Documentation Readme
 │
-├── .env.example         # Root environment template
-├── README.md            # This file
-└── .gitignore          # Git ignore rules
+├── .env.example                    # Root env template
+├── README.md                       # Root documentation
+└── .gitignore                      # Git ignore rules
 
-
----
 
 ## 🚀 Setup Instructions
 
