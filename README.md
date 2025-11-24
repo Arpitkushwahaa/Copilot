@@ -7,7 +7,7 @@ AI-powered code generation using natural language prompts.
 
 ---
 
-## 📁 Project 
+## 📁 Project Structure
 
 
 code-copilot/
