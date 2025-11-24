@@ -252,7 +252,10 @@ json
 *Arpit Kushwaha*  
 GitHub: [@Arpitkushwahaa](https://github.com/Arpitkushwahaa)
 
+Built with Next.js · Express · PostgreSQL · Gemini AI
 ---
 
 
  
+
+
