@@ -85,7 +85,7 @@ npm run dev  # http://localhost:3000
 
 ---
 
-## 🏗 
+## 🏗 Architecture Decisions
 
 *Frontend (Next.js):*
 * SSR for better performance and SEO
